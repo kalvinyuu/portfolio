@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ======================
+# Emacs Backup Files
+# ======================
+
+# Files containing tilde anywhere emacs undo tree
+*~*
+
+# Files containing hashtag anywhere emacs backup
+*\#*
+
+# Specific Emacs patterns (redundant but explicit)
+*~
+\#*#
+*#
+.#*
