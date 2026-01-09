@@ -17,7 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -35,11 +35,11 @@ export default function Home() {
         <section className="mb-16 relative">
           <div className="absolute right-0 top-0">
             <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
               className="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors"
               aria-label="Toggle theme"
             >
-              <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} className="w-5" />
+              <FontAwesomeIcon icon={resolvedTheme === "dark" ? faSun : faMoon} className="w-5" />
             </button>
           </div>
           <h1 className="text-4xl font-bold tracking-tight mb-8">k. yu</h1>
