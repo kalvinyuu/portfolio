@@ -91,23 +91,24 @@ export default function Home() {
         <section className="mb-16">
           <h2 className="text-xl font-bold mb-6 border-b border-zinc-200 dark:border-zinc-800 pb-2">Projects</h2>
           <div className="space-y-12">
+
             <div className="group">
               <div className="flex justify-between items-start mb-2">
                 <h3 className="text-lg font-semibold group-hover:opacity-100 transition-opacity">Multi-tenant E-commerce SaaS Platform</h3>
-                <span className="text-xs font-mono opacity-60">Next.js, Supabase, Stripe</span>
+                <span className="text-xs font-mono opacity-60">Next.js, Supabase, Stripe, Tailwind CSS, DragonflyDB, S3</span>
               </div>
               <ul className="list-disc list-outside ml-4 space-y-2 text-sm leading-relaxed opacity-90">
-                <li>Architected a transition from a personalised pyjama store to a multi-tenant e-commerce platform, migrating data to Supabase for simpler GDPR compliance and multi-tenant authentication.</li>
-                <li>Built a robust CMS for non-technical users to create stores, manage inventory, update store layouts, and track real-time orders.</li>
-                <li>Implemented dynamic storefronts using Next.js with a focus on SEO and performance.</li>
-                <li>Integrated Stripe for secure, vendor-specific payment processing.</li>
+                <li>Architected a transition from a personalised pyjama store to a multi-tenant e-commerce platform, migrating the auth and DB to Supabase for simpler GDPR compliance and multi-tenant authentication.</li>
+                <li>Built a robust CMS for non-technical users to create stores, manage inventory and products, update store layouts, and track real-time orders.</li>
+                <li> Using Next.js and AWS S3 I implented performant and cached dynamic storefronts with a focus on SEO and customisability.</li>
+                <li>Integrated DragonflyDB as local-storage wasn't a secure method for storing shopping carts which persists for multiple sessions.</li>
               </ul>
             </div>
 
             <div className="group">
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-lg font-semibold group-hover:opacity-100 transition-opacity">Web-based Image Manipulation Tool</h3>
-                <span className="text-xs font-mono opacity-60">Canvas API, React, Tailwind CSS</span>
+                <h3 className="text-lg font-semibold group-hover:opacity-100 transition-opacity">Web-based Image Manipulation Program</h3>
+                <span className="text-xs font-mono opacity-60">Canvas API, React, Tailwind CSS, FontAwesome</span>
               </div>
               <ul className="list-disc list-outside ml-4 space-y-2 text-sm leading-relaxed opacity-90">
                 <li>Engineered a lightweight, mobile-optimised image editing npm package allowing for real-time cropping, image optimising, bluring and more directly in the client's browser.</li>
@@ -115,10 +116,24 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="group border-2 border-dashed border-zinc-200 dark:border-zinc-800 rounded-lg p-8 text-center">
-              <h3 className="font-medium mb-2 opacity-70">Upcoming Project</h3>
-              <p className="text-sm italic opacity-50">New project details coming soon...</p>
+            <div className="group">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-semibold group-hover:opacity-100 transition-opacity">Agentic AI CLI tool with functionality to build RAGs and LoRAs</h3>
+                <span className="text-xs font-mono opacity-60">Ollama, Solana, React Ink, Lang Graph, SQLite, Bun, Next.js </span>
+              </div>
+              <ul className="list-disc list-outside ml-4 space-y-2 text-sm leading-relaxed opacity-90">
+                <li>Orchestrated the development of an AI ecosystem for a solana hackathon with the purpose of building a community geared towards creating and selling RAGs and LoRAs from your data </li>
+                <li>Created a systematic method of checking data is safe. (currently in alpha limited code via an automated method and not yet checked by humans.)</li>
+              </ul>
             </div>
+
+			
+			{/*
+			<div className="group border-2 border-dashed border-zinc-200 dark:border-zinc-800 rounded-lg p-8 text-center">
+            <h3 className="font-medium mb-2 opacity-70">Upcoming Project</h3>
+            <p className="text-sm italic opacity-50">New project details coming soon...</p>
+			</div>
+			  */}
           </div>
         </section>
 
@@ -146,7 +161,7 @@ export default function Home() {
         </section>
 
         <footer className="mt-24 pt-8 border-t border-zinc-100 dark:border-zinc-900 text-center opacity-50 text-xs">
-          Built with Next.js, React, Bun, and Tailwind CSS.
+
         </footer>
       </div>
     </main>
